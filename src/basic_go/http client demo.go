@@ -29,6 +29,9 @@ func main() {
 		log.Fatal(err2)
 	}
 	robots2, err2 := ioutil.ReadAll(res2.Body)
+	if err2 != nil {
+		log.Fatal(err2)
+	}
 	res2.Body.Close()
 	fmt.Printf("%s", robots2)
 }
